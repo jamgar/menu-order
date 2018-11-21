@@ -108,7 +108,7 @@ export default {
   .note {
     border: none;
     border-bottom: 1px solid #F3F3F3;
-    color: red;
+    color: #007bff;
     display: block;
     margin-bottom: 10px;
     width: 100%

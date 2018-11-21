@@ -4,12 +4,13 @@
       <h6>{{ item.name }}</h6>
       <small class="ml-auto">Qty: {{ item.quantity }} Cost: {{ getCost }}</small>
     </div>
-    <p v-if="item.note"class='text-danger'>{{ item.note }}</p>
+    <p v-if="item.note"class='text-primary'>{{ item.note }}</p>
     <div class="row">
       <div class="col">
         <button
-          class="btn btn-sm text-danger btn-light"
-          @click="removeMenuItem">x Remove</button>
+          id="removeBtn"
+          class="btn btn-sm btn-outline-danger"
+          @click="removeMenuItem">Remove</button>
       </div>
       <div class="col">
         <div class="input-group input-group-sm ml-auto">

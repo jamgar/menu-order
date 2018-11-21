@@ -1,6 +1,8 @@
 <template>
   <div class="menu">
     <b-row>
+      <app-timepicker :field="field" v-model="field"></app-timepicker>
+      <p>{{field}}</p>
       <b-col sm="8">
         <app-food-menu/>
       </b-col>
@@ -13,14 +15,21 @@
 
 <script>
 // @ is an alias to /src
+import Timepicker from '@/components/Timepicker'
 import FoodMenu from '@/components/FoodMenu'
 import OrderList from '@/components/OrderList'
 
 export default {
   name: 'home',
+  data() {
+    return {
+      field: 0
+    }
+  },
   components: {
     appFoodMenu: FoodMenu,
     appOrderList: OrderList,
+    appTimepicker: Timepicker
   }
 }
 </script>
